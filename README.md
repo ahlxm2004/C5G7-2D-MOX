@@ -6,7 +6,7 @@ A C++ solution of the C5G7-2D MOX benchmark.
 - The result is compared with which of AZTRAN code.
 
 Compilation method:
-- The code depends on the adept library.
+- The code depends on the [adept library](https://github.com/rjhogan/Adept-2).
 - <code>g++ C5G72D_sn.cpp -o C5G72D_sn -O3 -I "/path/to/adept"</code>
 
 Input format (in <code>input.txt</code>):
