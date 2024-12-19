@@ -1,5 +1,5 @@
 # C5G7-2D MOX benchmark
-A C++ implementation of the C5G7-2D MOX benchmark.
+A C++ solution of the C5G7-2D MOX benchmark.
 - Discrete-Ordinates Method (SN method) is used to discrete the angle term.
 - Source iteration method is used to solve the k-eigenvalue problem.
 - The convergence rate is accelerated by Anderson Acceleration (AA) and diffusion Synthetic Acceleration (DSA) method.
