@@ -12,8 +12,6 @@ struct jacobian_query {
 
 namespace jacobian_coloring {
 	int N1, N2, E;
-	int c1, c2;
-	double t1, t2;
 
 	std::vector <std::vector <int> > link_x, link_y;
 
@@ -115,12 +113,9 @@ namespace jacobian_coloring {
 	}
 
 	std::vector <jacobian_query> solve(bool binary = true) {
-		clock_t t = clock();
-		std::vector <jacobian_query> X = solve1(); c1 = X.size();
-		t1 = (double)(clock() - t) / CLOCKS_PER_SEC; t = clock();
+		std::vector <jacobian_query> X = solve1();
 		if (binary) {
-			std::vector <jacobian_query> Y = solve2(); c2 = Y.size();
-			t2 = (double)(clock() - t) / CLOCKS_PER_SEC;
+			std::vector <jacobian_query> Y = solve2();
 			if (X.size() > Y.size()) X.swap(Y);
 		}
 		std::vector <std::vector <int> > ().swap(link_x);
@@ -132,4 +127,3 @@ namespace jacobian_coloring {
 		return init(_N1, _N2, G, binary), solve(binary);
 	}
 }
-
