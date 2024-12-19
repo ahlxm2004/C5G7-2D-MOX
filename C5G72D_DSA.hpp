@@ -13,7 +13,7 @@ namespace C5G72D_DSA {
 	using namespace C5G72D_sn_frame;
 
 	vector_double_3d Dx, Dy;
-	linear_equation_solver_Ck <float> linear_solver;
+	linear_equation_solver_k <float> linear_solver;
 	Order order;
 
 	int T;
