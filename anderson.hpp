@@ -5,7 +5,8 @@ struct anderson {
 	const int D = 10;
 
 	int n, m, max_m, ne, error_width;
-	std::vector <double> pre, F, G;
+	std::vector <double> F, G;
+	std::vector <T> pre;
 	std::vector <std::vector <T> > Xs, Gk;
 	std::vector <std::vector <double> > R;
 	std::vector <double> error_list; 
@@ -104,4 +105,3 @@ struct anderson {
 		return next;
 	}
 };
-
